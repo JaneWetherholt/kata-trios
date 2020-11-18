@@ -1,7 +1,19 @@
 package babysitter;
 
 public class WageCalculator {
+//    attributes
+
+//    constructor
+    public WageCalculator() {
+
+    }
+//    methods
+
+
     public int calculateShiftWage(int startingHour, int endingHour, int bedtime) {
+        if(endingHour <= bedtime){
+            return (endingHour - startingHour) * 12;
+        }
         return 0;
     }
 }
@@ -16,6 +28,7 @@ public class WageCalculator {
 // gets paid $8/hour from bedtime to midnight.
 // gets paid $16/hour from midnight to the end of their shift.
 // will start their shift on the hour and end their shift on the hour.
+
 // The bedtime
 
 // will be between 8:00PM and 11:00PM.
