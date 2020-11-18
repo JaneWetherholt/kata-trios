@@ -11,14 +11,16 @@ public class WageCalculator {
 
 
     public int calculateShiftWage(int startingHour, int endingHour, int bedtime) {
-        if(endingHour <= bedtime){
+        if ((startingHour >= 17) && (endingHour <= bedtime)) {
             return (endingHour - startingHour) * 12;
-        } else if(endingHour >= bedtime){
+        } else if ((startingHour >= 17) && (endingHour >= bedtime)) {
             return (endingHour - startingHour) * 8;
+        } else if ((startingHour >= 0) && (endingHour <= 4)) {
+            return (endingHour - startingHour) * 16;
         }
-        return 0;
+            return 0;
+        }
     }
-}
 
 
 // The Rules:
